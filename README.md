@@ -120,3 +120,8 @@ curl -X GET "http://localhost:8081/metrics"
 - Apache Kafka (event streaming)
 - Prometheus (metrics collection)
 - golang-migrate (database migrations)
+
+## Some Notes
+
+If we absolutely dont want to lose messages on producer side we can implement Transactional Outbox or CDC (Change Data Capture).
+And for consumer side send failed messages to dead letter queue.
